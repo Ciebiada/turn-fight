@@ -1,0 +1,10 @@
+<template name="hello">
+    <div><button class="newGame">New game</button></div>
+
+    <h2>Your games:</h2>
+    <ul>
+        {{#each yourGames}}
+            <li><a href="/games/{{_id}}">{{_id}}</a></li>
+        {{/each}}
+    </ul>
+</template>

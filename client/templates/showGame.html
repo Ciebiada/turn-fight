@@ -1,0 +1,21 @@
+<template name="showGame">
+    <div><a href="/">Go back</a></div>
+    <h1>{{ _id }}</h1>
+    <div>
+        <button class="finishGame">Finish game</button>
+        {{#if canJoin}}
+        <button class="joinGame">Join game</button>
+        {{/if}}
+    </div>
+    <p>Status: {{status}}</p>
+    <p>Host: {{host.username}} [{{host.score}}]</p>
+    <p>Guest: {{guest.username}} [{{guest.score}}]</p>
+    <p>
+    <fieldset disabled="{{#if moved}}true{{/if}}">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </fieldset>
+    </p>
+    <p>Move: {{move}}</p>
+</template>

@@ -1,0 +1,9 @@
+<template name="appBody">
+    <p>{{> loginButtons}}</p>
+
+    <div>
+        {{#if currentUser}}
+            {{> yield}}
+        {{/if}}
+    </div>
+</template>
